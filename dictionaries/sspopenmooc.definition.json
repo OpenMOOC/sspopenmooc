@@ -1,0 +1,35 @@
+{
+	"welcome": {
+		"en": "Welcome"
+	},
+	"log_in": {
+		"en": "Log in"
+	},
+	"log_out": {
+		"en": "Log out"
+	},
+	"profile": {
+		"en": "Profile"
+	},
+	"register": {
+		"en": "Register"
+	},
+	"courses": {
+		"en": "Courses"
+	},
+	"legal": {
+		"en": "Legal"
+	},
+	"changepassword": {
+		"en": "Change password"
+	},	
+	"forgotpassword": {
+		"en": "Forgot your password?"
+	},
+	"tos": {
+		"en": "Terms of use"
+	},
+	"copyright": {
+		"en": "Copyright"
+	}
+}

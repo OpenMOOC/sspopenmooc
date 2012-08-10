@@ -1,0 +1,35 @@
+{
+	"welcome": {
+		"es": "Bienvenido"
+	},
+	"log_in": {
+		"es": "Iniciar sesión"
+	},
+	"log_out": {
+		"es": "Cerrar sesión"
+	},
+	"profile": {
+		"es": "Perfil"
+	},
+	"register": {
+		"es": "Registrar"
+	},
+	"courses": {
+		"es": "Cursos"
+	},
+	"legal": {
+		"es": "Legal"
+	},
+	"changepassword": {
+		"es": "Cambiar clave"
+	},	
+	"forgotpassword": {
+		"en": "¿Olvidastes tu clave?"
+	},
+	"tos": {
+		"es": "Términos de uso"
+	},
+	"copyright": {
+		"es": "Copyright"
+	}
+}
