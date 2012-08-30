@@ -8,7 +8,41 @@ $session = SimpleSAML_Session::getInstance();
 
 $themeconf = SimpleSAML_Configuration::getConfig('module_sspopenmooc.php');
 
-$urls = $themeconf->getarray('urls');
+$urls = $themeconf->getArray('urls');
+$cssfile = $themeconf->getString('cssfile', 'default.css');
+$bootstrapfile = $themeconf->getString('bootstrapfile', 'bootstrap.css');
+$imgfile = $themeconf->getString('imgfile', 'logo.png');
+$slogan = $themeconf->getString('slogan', 'Knowledge for the masses');
+$title = $themeconf->getString('title', 'OpenMooc');
+
+if(empty($cssfile)) {
+	$cssfile = 'default.css';
+}
+if(empty($bootstrapfile)) {
+	$bootstrapfile = 'bootstrap.css';
+}
+if(empty($imgfile)) {
+	$imgfile = 'logo.png';
+}
+if(empty($title)) {
+	$title = 'OpenMooc';
+}
+if(empty($slogan)) {
+	$slogan = 'Knowledge for the masses';
+}
+
+
+if (strpos($cssfile, 'http') === FALSE) {
+	$cssfile = '/'. $this->data['baseurlpath'] .'module.php/sspopenmooc/openmooc/css/'.$cssfile;
+}
+if (strpos($bootstrapfile, 'http') === FALSE) {
+	$bootstrapfile = '/'. $this->data['baseurlpath'] .'module.php/sspopenmooc/openmooc/css/'.$bootstrapfile;
+}
+
+if (strpos($imgfile, 'http') === FALSE) {
+	$imgfile = '/'. $this->data['baseurlpath'] .'module.php/sspopenmooc/openmooc/img/'.$imgfile;
+}
+
 
 // Needed due includeLanguageFile funtion only works with the base dictionaries
 $file = SimpleSAML_Module::getModuleDir('sspopenmooc') . '/dictionaries/sspopenmooc';
@@ -66,8 +100,11 @@ if(array_key_exists('header', $this->data)) {
 }
 ?></title>
 
-	<link rel="stylesheet" type="text/css" href="/<?php echo $this->data['baseurlpath']; ?>module.php/sspopenmooc/openmooc/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="/<?php echo $this->data['baseurlpath']; ?>module.php/sspopenmooc/openmooc/css/default.css" />
+<?php
+	echo    '<link rel="stylesheet" type="text/css" href="'. $bootstrapfile.'" />';
+	echo	'<link rel="stylesheet" type="text/css" href="'. $cssfile.'" />';
+
+?>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="/static/js/libs/jquery-1.7.2.min.js"><\/script>')
@@ -188,8 +225,10 @@ if($onLoad !== '') {
 		?>
 
 		<hgroup>
-			<h1><a class="hide-text" href="<?php echo $urls['site']; ?>"><img alt="OpenMooc" src="/<?php echo $this->data['baseurlpath']; ?>module.php/sspopenmooc/openmooc/img/logo.png">OpenMooc</a></h1>
-			<h2 class="small pull-left">Knowledge for the masses</h2>
+<?php
+	echo '<h1><a class="hide-text" href="'.$urls['site'].'"><img alt="'.$title.'" src="'.$imgfile.'">'.$title.'</a></h1>';
+?>
+ 		  <h2 class="small pull-left"><?php echo $slogan; ?></h2>
 		</hgroup>
 
 		<div class="btn-toolbar pull-right">
