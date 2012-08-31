@@ -9,7 +9,7 @@
 		"en": "Log out"
 	},
 	"profile": {
-		"en": "Profile"
+		"en": "Profile Preferences"
 	},
 	"register": {
 		"en": "Register"
@@ -18,7 +18,7 @@
 		"en": "Courses"
 	},
 	"legal": {
-		"en": "Legal"
+		"en": "Legal conditions"
 	},
 	"changepassword": {
 		"en": "Change password"
@@ -30,6 +30,6 @@
 		"en": "Terms of use"
 	},
 	"copyright": {
-		"en": "Copyright"
+		"en": "UnedComa Copyright 2012"
 	}
 }

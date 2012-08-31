@@ -9,16 +9,16 @@
 		"es": "Cerrar sesión"
 	},
 	"profile": {
-		"es": "Perfil"
+		"es": "Preferencias del perfil"
 	},
 	"register": {
 		"es": "Registrar"
 	},
 	"courses": {
-		"es": "Cursos"
+		"es": "Mis clases"
 	},
 	"legal": {
-		"es": "Legal"
+		"es": "Condiciones legales"
 	},
 	"changepassword": {
 		"es": "Cambiar clave"
@@ -30,6 +30,6 @@
 		"es": "Términos de uso"
 	},
 	"copyright": {
-		"es": "Copyright"
+		"es": "UnedComa Copyright 2012"
 	}
 }

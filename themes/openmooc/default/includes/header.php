@@ -184,7 +184,7 @@ if($onLoad !== '') {
 ?>
 <body<?php echo $onLoad; ?>>
 
-<div id="wrap">
+<div id="wrap" class="container">
 	
     <header>
 

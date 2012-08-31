@@ -10,8 +10,6 @@ body {
     background-color: #F1F1F1;
     color: #333333;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 13px;
-	line-height: 18px;
 }
 
 img {
@@ -28,29 +26,10 @@ hr {
 	clear: both;
 }
 
-/* LINKS */
-a, a:link, a:link, a:link {
-
-	text-decoration: none;
-	color: #0088CC;
-	border-bottom: 1px dotted #ccc;
-	font-weight: normal;
-}
-
-a:link, a:visited {
-	text-decoration: none;
-	border-bottom: 1px dotted #ccc;
-	font-weight: normal;
-}
 .ui-tabs-nav a {
 	border: none ! important;
 	text-decoration: none;
 }
-
-a:hover, a:active {
-	color: #005580;
-	text-decoration: none;
-} 
 
 /* LISTS */
 ul {
@@ -67,14 +46,6 @@ li {
 
 dt {
 	font-weight: bold;
-}
-
-#wrap {
-    background-color: #F1F1F1;
-	text-align: left;
-	width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #languagebar {
@@ -100,25 +71,25 @@ header {
     border-bottom: 1px solid #DDDDDD;
     margin-bottom: 1em;
     position: relative;
-	display: block;
+    display: block;
 }
 
 header h1 {
-	margin: 0;
-	padding-bottom: 0px;
+    margin: 0;
+    padding-bottom: 0px;
 }
 
 header h2 {
-	font-size: 12pt;
+    font-size: 12pt;
     padding-top: 0.5em;
-	line-height: 36px;
+    line-height: 36px;
     color: inherit;
     font-family: inherit;
-	font-weight: bold;
-	margin: 0;
-	padding-bottom: 0;
-	text-rendering: optimizelegibility;
-	letter-spacing: 0px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0;
+    text-rendering: optimizelegibility;
+    letter-spacing: 0px;
 }
 
 header hgroup {
@@ -126,22 +97,22 @@ header hgroup {
 }
 
 .pull-right {
-	float: right;
+    float: right;
 }
 
 .pull-left {
-	float: left;
+    float: left;
 }
 
 footer {
-	display: block;
+    display: block;
     border-top: 1px solid #DDDDDD;
     padding: 1em 0;
 }
 
 #content {
-	min-height: 400px;
-	margin-top: 2em;
+    min-height: 400px;
+    margin-top: 2em;
 }
 
 /* TYPOGRAPHY */
@@ -381,14 +352,6 @@ caption {
 	border-bottom: 1px solid #CCCCCC !important;
 }
 
-
-.dropdown-menu a {
-	border: 0 !important;
-}
-
-.dropdown-menu li {
-	margin-left: 0px !important;
-}
 .alert {
     -moz-border-radius: 4px 4px 4px 4px;
     background-color: #FCF8E3;
