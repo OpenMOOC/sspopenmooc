@@ -126,6 +126,10 @@ dl dd {
 	font-size: large;
 }
 
+.formTable input[type="checkbox"] {
+    margin: -3px 0 0;
+}
+
 div.caution {
 	background-color:  #FF9;
 	background-image: url('../../../../resources/icons/experience/gtk-dialog-warning.48x48.png');
