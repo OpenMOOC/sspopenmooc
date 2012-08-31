@@ -24,9 +24,10 @@ if(!empty($this->data['htmlinject']['htmlContentPost'])) {
 	
 	<footer> 
 		<div class="footerLinks">
-<?php
-	echo	'<a href="'.$urls['legal'].'" >'.$this->t('legal').'</a> - <a href="'.$urls['tos'].'">'.$this->t('tos').'</a> - <a href="'.$urls['copyright'].'">'.$this->t('copyright').'</a>';
+			<ul>
+<?php echo  '<li><a href="'.$urls['legal'].'" >'.$this->t('legal').'</a></li><li><a href="'.$urls['copyright'].'">'.$this->t('copyright').'</a></li><li><a href="'.$urls['tos'].'">'.$this->t('tos').'</a></li>';
 ?>
+			</ul>
 		</div>
 	</footer>
 	

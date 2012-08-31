@@ -25,23 +25,6 @@ hr {
 	text-decoration: none;
 }
 
-/* LISTS */
-ul {
-	margin: .3em 0 1.5em 2em;
-}
-
-ul.related {
-	margin-top: -1em;
-}
-
-li {
-	margin-left: 2em;
-}
-
-dt {
-	font-weight: bold;
-}
-
 #languagebar {
         text-align: right;
         position: relative;
@@ -72,6 +55,17 @@ footer {
     display: block;
     border-top: 1px solid #DDDDDD;
     padding: 1em 0;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    padding-right: 1em;
 }
 
 #content {
@@ -259,36 +253,4 @@ caption {
 	font-size: 110%;
 	line-height: 24px;
 	min-width: 30px;
-}
-
-.btn {
-	border-bottom: 1px solid #CCCCCC !important;
-}
-
-.alert {
-    -moz-border-radius: 4px 4px 4px 4px;
-    background-color: #FCF8E3;
-    border: 1px solid #FBEED5;
-    color: #C09853;
-    margin-bottom: 18px;
-    padding: 8px 35px 8px 14px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-.alert-danger, .alert-error {
-    background-color: #F2DEDE;
-    border-color: #EED3D7;
-    color: #B94A48;
-}
-.alert-heading {
-    color: inherit;
-}
-
-.alert h4 {
-	margin: 0;
-	padding: 0 !important;
-	border: 0;
-}
-
-.alert p {
-	margin: 0;	
 }
