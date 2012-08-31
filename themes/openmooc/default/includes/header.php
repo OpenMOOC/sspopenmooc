@@ -235,22 +235,21 @@ if($onLoad !== '') {
 <?php
 
 	if($session->isAuthenticated()) {
-		$attrs = $session->getAttributes();
-		$welcome = $attrs['cn'][0].' '.$attrs['sn'][0];
+                $welcome_user = $attrs['cn'][0].' '.$attrs['sn'][0];
 
 
-		echo '<div class="btn-group">';
-		echo '<a class="btn" href="'.$urls['site'].'">'.$this->t('courses').'</a>';
+                echo '<div class="btn-group">';
+                echo '<a class="btn" href="'.$urls['site'].'">'.$this->t('courses').'</a>';
 ?>
-		</div>
-		<div class="btn-group">
-			<a data-toggle="dropdown" class="btn dropdown-toggle">
+                </div>
+                <div class="btn-group">
+                        <a data-toggle="dropdown" class="btn dropdown-toggle">
 <?php
-      echo  $this->t('welcome').', '.$welcome;
+      echo  $this->t('welcome').', '.$welcome_user.' ';
 ?>
-		      <span class="caret"></span>
-	    </a>
-		<ul class="dropdown-menu">
+                      <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu">
 <?php
 	echo	'<li><a href="'.$urls['profile'].'">'.$this->t('profile').'</a></li>';
 	echo	'<li><a href="'.$urls['changepassword'].'">'.$this->t('changepassword').'</a></li>';
