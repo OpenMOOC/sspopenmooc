@@ -235,7 +235,8 @@ if($onLoad !== '') {
 <?php
 
 	if($session->isAuthenticated()) {
-                $welcome_user = $attrs['cn'][0].' '.$attrs['sn'][0];
+                $attrs = $session->getAttributes(); 	
+                $friendlyName = $attrs['cn'][0].' '.$attrs['sn'][0];
 
 
                 echo '<div class="btn-group">';
@@ -245,7 +246,7 @@ if($onLoad !== '') {
                 <div class="btn-group">
                         <a data-toggle="dropdown" class="btn dropdown-toggle">
 <?php
-      echo  $this->t('welcome').', '.$welcome_user.' ';
+      echo  $this->t('welcome').', '.$friendlyName.' ';
 ?>
                       <span class="caret"></span>
             </a>
