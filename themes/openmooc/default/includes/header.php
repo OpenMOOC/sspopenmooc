@@ -110,7 +110,7 @@ if(array_key_exists('header', $this->data)) {
 		window.jQuery || document.write('<script src="/static/js/libs/jquery-1.7.2.min.js"><\/script>')
 	</script>
 	<script src="/<?php echo $this->data['baseurlpath']; ?>module.php/sspopenmooc/openmooc/js/bootstrap.js"></script>
-	<link rel="icon" type="image/icon" href="/<?php echo $this->data['baseurlpath']; ?>resources/icons/favicon.ico" />
+	<link rel="icon" type="image/icon" href="/<?php echo $this->data['baseurlpath']; ?>module.php/sspopenmooc/openmooc/img/favicon.ico" />
 
 <?php
 
@@ -191,8 +191,6 @@ if($onLoad !== '') {
 		<?php 
 	
 		$includeLanguageBar = TRUE;
-		if (!empty($_POST)) 
-			$includeLanguageBar = FALSE;
 		if (isset($this->data['hideLanguageBar']) && $this->data['hideLanguageBar'] === TRUE) 
 			$includeLanguageBar = FALSE;
 	
