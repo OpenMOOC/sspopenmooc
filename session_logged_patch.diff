@@ -1,0 +1,77 @@
+Index: www/resources/icons/favicon.ico
+===================================================================
+No se puede mostrar: el archivo está marcado como binario.
+svn:mime-type = application/octet-stream
+Index: lib/SimpleSAML/XHTML/Template.php
+===================================================================
+--- lib/SimpleSAML/XHTML/Template.php	(revisión: 3156)
++++ lib/SimpleSAML/XHTML/Template.php	(copia de trabajo)
+@@ -486,6 +486,9 @@
+ 	 */
+ 	private function readDictionaryJSON($filename) {
+ 		$definitionFile = $filename . '.definition.json';
++	
++		SimpleSAML_Logger::debug('-----> '.$definitionFile);
++
+ 		assert('file_exists($definitionFile)');
+ 
+ 		$fileContent = file_get_contents($definitionFile);
+@@ -541,6 +544,8 @@
+ 		SimpleSAML_Logger::debug('Template: Reading [' . $filename . ']');
+ 
+ 		$jsonFile = $filename . '.definition.json';
++
++		SimpleSAML_Logger::debug('Voy a leer '.$jsonFile);
+ 		if (file_exists($jsonFile)) {
+ 			return $this->readDictionaryJSON($filename);
+ 		}
+@@ -696,7 +701,7 @@
+ 		if (!in_array($language, $availableLanguages, TRUE) || headers_sent()) {
+ 			return;
+ 		}
+-		setcookie('language', $language, time()+60*60*24*900, '/');
++		setcookie('language', $language, time()+60*60*24*900, '/', '.openmooc.org');
+ 	}
+ 
+ }
+Index: lib/SimpleSAML/SessionHandlerCookie.php
+===================================================================
+--- lib/SimpleSAML/SessionHandlerCookie.php	(revisión: 3156)
++++ lib/SimpleSAML/SessionHandlerCookie.php	(copia de trabajo)
+@@ -45,6 +45,7 @@
+ 	 * @return string  The session id saved in the cookie.
+ 	 */
+ 	public function getCookieSessionId() {
++
+ 		if ($this->session_id === NULL) {
+ 			if(self::hasSessionCookie()) {
+ 				/* Attempt to retrieve the session id from the cookie. */
+@@ -116,4 +117,4 @@
+ 
+ }
+ 
+-?>
+\ No newline at end of file
++?>
+Index: lib/SimpleSAML/Session.php
+===================================================================
+--- lib/SimpleSAML/Session.php	(revisión: 3156)
++++ lib/SimpleSAML/Session.php	(copia de trabajo)
+@@ -528,6 +528,7 @@
+ 		$this->authToken = SimpleSAML_Utilities::generateID();
+ 		$sessionHandler = SimpleSAML_SessionHandler::getSessionHandler();
+ 		$sessionHandler->setCookie($globalConfig->getString('session.authtoken.cookiename', 'SimpleSAMLAuthToken'), $this->authToken);
++                $sessionHandler->setCookie('saml2_logged', True);
+ 	}
+ 
+ 
+@@ -563,6 +564,9 @@
+ 			$this->authority = NULL;
+ 		}
+ 
++                $sessionHandler = SimpleSAML_SessionHandler::getSessionHandler();
++                $sessionHandler->setCookie('saml2_logged', NULL);
++
+ 		/* Delete data which expires on logout. */
+ 		$this->expireDataLogout();
+ 	}

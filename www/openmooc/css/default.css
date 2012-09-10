@@ -224,6 +224,7 @@ fieldset.fancyfieldset legend {
 	margin-left: 2em;
 	padding: 3px 2em 3px 2em;
 	border: 1px solid #bbb;
+        width: auto;
 }
 
 div#confirmation input {
