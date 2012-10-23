@@ -32,14 +32,14 @@ if(empty($slogan)) {
 }
 
 
-if (strpos($cssfile, 'http') === FALSE) {
+if (strpos($cssfile, '//') === FALSE) {
 	$cssfile = '/'. $this->data['baseurlpath'] .'module.php/sspopenmooc/openmooc/css/'.$cssfile;
 }
-if (strpos($bootstrapfile, 'http') === FALSE) {
+if (strpos($bootstrapfile, '//') === FALSE) {
 	$bootstrapfile = '/'. $this->data['baseurlpath'] .'module.php/sspopenmooc/openmooc/css/'.$bootstrapfile;
 }
 
-if (strpos($imgfile, 'http') === FALSE) {
+if (strpos($imgfile, '//') === FALSE) {
 	$imgfile = '/'. $this->data['baseurlpath'] .'module.php/sspopenmooc/openmooc/img/'.$imgfile;
 }
 

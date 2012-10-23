@@ -15,7 +15,9 @@ $config = array(
 		'copyright' => '',
 	),
 
-	// File (Ex.  default.css)  or URL (Ex. http://example.com/css/default.css)
+	// Internal file (Ex.  default.css)  or external (Ex. //example.com/css/default.css)
+        // (Notice that // will respect the http/https protocol, 
+        //  load elements with different protocol than main page produce warnings on some browser)
 	'cssfile' => 'default.css',
 	'bootstrapfile' => 'bootstrap.css',
 	'imgfile' => 'logo.png',
