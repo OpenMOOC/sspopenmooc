@@ -233,8 +233,13 @@ if($onLoad !== '') {
 <?php
 
 	if($session->isAuthenticated()) {
-                $attrs = $session->getAttributes(); 	
-                $friendlyName = $attrs['cn'][0].' '.$attrs['sn'][0];
+                $isadmin = SimpleSAML_Utilities::isAdmin();
+                if ($isadmin) {
+                    $friendlyName = 'admin';
+                } else {
+                    $attrs = $session->getAttributes(); 	
+                    $friendlyName = $attrs['cn'][0].' '.$attrs['sn'][0];
+                }
 
 
                 echo '<div class="btn-group">';
@@ -250,8 +255,12 @@ if($onLoad !== '') {
             </a>
                 <ul class="dropdown-menu">
 <?php
-	echo	'<li><a href="'.$urls['profile'].'">'.$this->t('profile').'</a></li>';
-	echo	'<li><a href="'.$urls['changepassword'].'">'.$this->t('changepassword').'</a></li>';
+    if (!$isadmin) {
+        echo	'<li><a href="'.$urls['profile'].'">'.$this->t('profile').'</a></li>';
+        echo	'<li><a href="'.$urls['changepassword'].'">'.$this->t('changepassword').'</a></li>';
+    } else {
+        echo	'<li><a href="'.$urls['manageusers'].'">'.$this->t('manageusers').'</a></li>';
+    }
 	echo	'<li class="divider"></li>';
 	echo    '<li><a href="'.$urls['logout'].'">'.$this->t('log_out'),'</a></li>';
 ?>

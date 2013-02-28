@@ -29,6 +29,9 @@
 	"tos": {
 		"en": "Terms of use"
 	},
+	"manageusers": {
+		"en": "Manage users"
+	},
 	"copyright": {
 		"en": "OpenMOOC Copyright 2013"
 	}
