@@ -7,6 +7,7 @@ $config = array(
 		'login' => '',
 		'register' => '',
 		'logout' => '',
+		'manageusers' => '',
 		'forgotpassword' => '',
 		'changepassword' => '',
 		'profile' => '',
