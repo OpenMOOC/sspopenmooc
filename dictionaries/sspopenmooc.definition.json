@@ -32,6 +32,9 @@
 	"manageusers": {
 		"en": "Manage users"
 	},
+	"newuser": {
+		"en": "Create new account"
+	},
 	"copyright": {
 		"en": "OpenMOOC Copyright 2013"
 	}

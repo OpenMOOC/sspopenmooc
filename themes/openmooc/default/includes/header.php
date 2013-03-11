@@ -259,6 +259,7 @@ if($onLoad !== '') {
         echo	'<li><a href="'.$urls['profile'].'">'.$this->t('profile').'</a></li>';
         echo	'<li><a href="'.$urls['changepassword'].'">'.$this->t('changepassword').'</a></li>';
     } else {
+        echo	'<li><a href="'.$urls['newuser'].'">'.$this->t('newuser').'</a></li>';
         echo	'<li><a href="'.$urls['manageusers'].'">'.$this->t('manageusers').'</a></li>';
     }
 	echo	'<li class="divider"></li>';
