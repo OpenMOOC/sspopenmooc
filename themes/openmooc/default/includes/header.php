@@ -232,7 +232,7 @@ if($onLoad !== '') {
 		<div class="btn-toolbar pull-right">
 <?php
 
-	if($session->isAuthenticated()) {
+	if($session->isAuthenticated() && $session->remainingTime() > 0) {
                 $isadmin = SimpleSAML_Utilities::isAdmin();
                 if ($isadmin) {
                     $friendlyName = 'admin';
