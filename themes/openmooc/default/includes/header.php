@@ -229,7 +229,6 @@ if($onLoad !== '') {
  		  <h2 class="small pull-left"><?php echo $slogan; ?></h2>
 		</hgroup>
 
-		<div class="btn-toolbar pull-right">
 <?php
 
 	if($session->isAuthenticated() && $session->remainingTime() > 0) {
@@ -242,6 +241,7 @@ if($onLoad !== '') {
                 }
 
 
+                echo '<div class="btn-toolbar pull-right">';
                 echo '<div class="btn-group">';
                 echo '<a class="btn" href="'.$urls['site'].'">'.$this->t('courses').'</a>';
 ?>
@@ -267,15 +267,10 @@ if($onLoad !== '') {
 ?>
 		</ul>
 	  </div>
+     </div>
 <?php
 	}
-	else {
-		echo '<a class="btn" href="'.$urls['register'].'">'.$this->t('register').'</a>';
-		echo '<a class="btn" href="'.$urls['login'].'">'.$this->t('log_in').'</a>';
-	}
 ?>
-		</div>
-
 	<div class="clearfix"></div>
 
     </header>
