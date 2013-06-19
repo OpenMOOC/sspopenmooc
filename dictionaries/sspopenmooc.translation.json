@@ -29,6 +29,9 @@
 	"forgotpassword": {
 		"es": "¿Olvidaste tu clave?"
 	},
+	"changemail": {
+		"es": "Cambiar correo electrónico"
+	},
 	"tos": {
 		"es": "Términos de uso"
 	},

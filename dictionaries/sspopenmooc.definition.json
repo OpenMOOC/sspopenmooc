@@ -26,6 +26,9 @@
 	"forgotpassword": {
 		"en": "Forgot your password?"
 	},
+	"changemail": {
+		"en": "Change mail"
+	},
 	"tos": {
 		"en": "Terms of use"
 	},

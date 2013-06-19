@@ -11,6 +11,7 @@ $config = array(
 		'newuser' => '',
 		'forgotpassword' => '',
 		'changepassword' => '',
+		'changemail' => '',
 		'profile' => '',
 		'legal' => '',
 		'tos' => '',

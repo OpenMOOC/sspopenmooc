@@ -197,7 +197,7 @@ if($onLoad !== '') {
 		if ($includeLanguageBar) {
 		
 		
-			echo '<div id="languagebar">';
+			echo '<div id="languagebar" class="pull-right">';
 			$languages = $this->getLanguageList();
 			$langnames = array(
 						'en' => 'English',
@@ -258,6 +258,9 @@ if($onLoad !== '') {
     if (!$isadmin) {
         echo	'<li><a href="'.$urls['profile'].'">'.$this->t('profile').'</a></li>';
         echo	'<li><a href="'.$urls['changepassword'].'">'.$this->t('changepassword').'</a></li>';
+	if(isset($urls['changemail'])) {
+		echo    '<li><a href="'.$urls['changemail'].'">'.$this->t('changemail').'</a></li>';
+	}
     } else {
         echo	'<li><a href="'.$urls['newuser'].'">'.$this->t('newuser').'</a></li>';
         echo	'<li><a href="'.$urls['manageusers'].'">'.$this->t('manageusers').'</a></li>';
